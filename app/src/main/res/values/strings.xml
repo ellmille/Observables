@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Observables</string>
+    <string name="change_value">Change Value</string>
+    <string name="add_device">Add Device</string>
+</resources>
