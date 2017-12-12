@@ -13,6 +13,7 @@ import com.sandbox.observables.Data.DeviceContainer;
 import com.sandbox.observables.databinding.ActivityMainBinding;
 
 import java.util.Random;
+//todo: https://developer.android.com/topic/libraries/data-binding/index.html
 
 public class MainActivity extends AppCompatActivity {
     private Random random = new Random();
