@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.sandbox.observables.BR;
 import com.sandbox.observables.Data.DataPoint;
 import com.sandbox.observables.Data.DataPointContainer;
 import com.sandbox.observables.R;
@@ -33,8 +32,10 @@ public class DataListViewAdapter extends RecyclerView.Adapter<DataListViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        ViewDataBinding viewDataBinding = holder.getDataBinding();
-        viewDataBinding.setVariable(BR.dataPoint, DataPointContainer.getInstance().getDataPointList().get(position));
+        final DataPoint dataPoint = dataPoints.get(position);
+        holder.bind(dataPoint);
+//        ViewDataBinding viewDataBinding = holder.getDataBinding();
+//        viewDataBinding.setVariable(BR.dataPoint, DataPointContainer.getInstance().getDataPointList().get(position));
     }
 
     @Override
@@ -49,11 +50,11 @@ public class DataListViewAdapter extends RecyclerView.Adapter<DataListViewAdapte
             super(viewDataBinding.getRoot());
             viewDataBinding.getRoot().setOnClickListener(clickListener);
             this.dataBinding = viewDataBinding;
-            this.dataBinding.executePendingBindings();
         }
 
-        public ViewDataBinding getDataBinding(){
-            return dataBinding;
+        public void bind(DataPoint dataPoint){
+            dataBinding.setVariable(com.sandbox.observables.BR.dataPoint, dataPoint);
+            dataBinding.executePendingBindings();
         }
 
         private View.OnClickListener clickListener = new View.OnClickListener() {
