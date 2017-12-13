@@ -34,5 +34,6 @@ public class ListViewActivity extends AppCompatActivity {
 
     public void addDevice(View view){
         new Device("Device".concat(String.valueOf(random.nextInt(100))), random.nextInt(100));
+        recyclerView.getAdapter().notifyDataSetChanged();
     }
 }

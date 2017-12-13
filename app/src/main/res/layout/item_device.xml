@@ -6,8 +6,8 @@
             type="com.sandbox.observables.Data.Device" />
     </data>
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="5dp">
 
@@ -15,12 +15,14 @@
             android:id="@+id/device_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="@{device.name}"/>
 
         <TextView
             android:id="@+id/device_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="@{String.valueOf(device.id)}" />
     </LinearLayout>
 </layout>
