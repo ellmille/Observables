@@ -1,5 +1,6 @@
 package com.sandbox.observables;
 
+import android.content.Intent;
 import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
@@ -9,7 +10,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.sandbox.observables.Data.Device;
-import com.sandbox.observables.Data.DeviceContainer;
 import com.sandbox.observables.databinding.ActivityMainBinding;
 
 import java.util.Random;
@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         //set binding
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setVital(vital);
-        binding.setDevice(DeviceContainer.getInstance().getDeviceList());
     }
 
     public void changeValue(View view) {
@@ -34,8 +33,12 @@ public class MainActivity extends AppCompatActivity {
         vital.setPriority();
     }
 
-    public void addDevice(View view) {
-        new Device("Device".concat(String.valueOf(vital.getValue())), vital.getValue());
+    public void navToList(View view) {
+        new Device("Name", 123);
+        new Device("Second Device", 234);
+
+        Intent intent = new Intent(this, ListViewActivity.class);
+        startActivity(intent);
     }
 
     @BindingAdapter("bind:numberText")
