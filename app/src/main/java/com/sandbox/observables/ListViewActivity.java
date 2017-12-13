@@ -13,7 +13,6 @@ import com.sandbox.observables.UI.DeviceListViewAdapter;
 import java.util.Random;
 
 public class ListViewActivity extends AppCompatActivity {
-   // private ActivityListViewBinding binding;
     private RecyclerView recyclerView;
     private Random random = new Random();
 
@@ -27,9 +26,6 @@ public class ListViewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(viewAdapter);
-
-//        binding = DataBindingUtil.setContentView(this, R.layout.activity_list_view);
-//        binding.setDeviceList(DeviceContainer.getInstance().getDeviceList());
     }
 
     public void addDevice(View view){

@@ -21,7 +21,6 @@ public class DeviceContainer {
     public void addToDeviceList(Device device){
         deviceList.add(device);
         System.out.println(deviceList.size());
-        //notifyAll();
     }
 
     public ObservableArrayList<Device> getDeviceList(){

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.sandbox.observables.Data.Device;
+import com.sandbox.observables.Data.Vital;
 import com.sandbox.observables.databinding.ActivityMainBinding;
 
 import java.util.Random;

@@ -4,7 +4,7 @@
     <data>
         <variable
             name="vital"
-            type="com.sandbox.observables.Vital" />
+            type="com.sandbox.observables.Data.Vital" />
     </data>
     <android.support.constraint.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"

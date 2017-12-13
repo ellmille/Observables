@@ -1,4 +1,4 @@
-package com.sandbox.observables;
+package com.sandbox.observables.Data;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
