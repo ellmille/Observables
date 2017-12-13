@@ -3,4 +3,5 @@
     <string name="change_value">Change Value</string>
     <string name="add_device">Add Device</string>
     <string name="list_view">List View</string>
+    <string name="mvp_view">MVP View</string>
 </resources>

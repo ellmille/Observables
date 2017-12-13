@@ -41,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ListViewActivity.class);
         startActivity(intent);
     }
+    public void navToMVP(View view) {
+        Intent intent = new Intent(this, MVPActivity.class);
+        startActivity(intent);
+    }
 
     @BindingAdapter("bind:numberText")
     public static void setNumberText(TextView view, int number){
