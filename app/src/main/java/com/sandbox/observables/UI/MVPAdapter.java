@@ -5,7 +5,9 @@ import android.databinding.ObservableList;
 import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.sandbox.observables.Data.DataPoint;
 import com.sandbox.observables.R;
@@ -16,11 +18,7 @@ import com.sandbox.observables.R;
 
 public class MVPAdapter extends RecyclerView.Adapter<MVPAdapter.MVPViewHolder> {
     private ObservableList<DataPoint> dataPointList;
-  //  private List<DataPoint> dataPointList;
 
-//    public MVPAdapter(List<DataPoint> dataPointList){
-//        this.dataPointList = dataPointList;
-//    }
     public MVPAdapter(ObservableList<DataPoint> dataPoints){
         this.dataPointList = dataPoints;
         dataPointList.addOnListChangedCallback(new ObservableList.OnListChangedCallback<ObservableList<DataPoint>>() {
@@ -74,6 +72,7 @@ public class MVPAdapter extends RecyclerView.Adapter<MVPAdapter.MVPViewHolder> {
 
         public MVPViewHolder(final ViewDataBinding binding) {
             super(binding.getRoot());
+            binding.getRoot().setOnClickListener(clickListener);
             this.binding = binding;
         }
 
@@ -81,5 +80,13 @@ public class MVPAdapter extends RecyclerView.Adapter<MVPAdapter.MVPViewHolder> {
             binding.setVariable(com.sandbox.observables.BR.dataPoint, dataPoint);
             binding.executePendingBindings();
         }
+
+        private View.OnClickListener clickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = getAdapterPosition();
+                Toast.makeText(binding.getRoot().getContext(), dataPointList.get(position).getName(), Toast.LENGTH_LONG).show();
+            }
+        };
     }
 }
