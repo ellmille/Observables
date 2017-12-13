@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.sandbox.observables.Data.DataPoint;
+import com.sandbox.observables.Data.DataPointContainer;
 import com.sandbox.observables.UI.DataListViewAdapter;
 
 import java.util.Random;
@@ -26,7 +27,7 @@ public class ListViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
         recyclerView = findViewById(R.id.device_list);
-        DataListViewAdapter viewAdapter = new DataListViewAdapter();
+        DataListViewAdapter viewAdapter = new DataListViewAdapter(DataPointContainer.getInstance().getDataPointList());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
