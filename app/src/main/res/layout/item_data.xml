@@ -2,8 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
-            name="device"
-            type="com.sandbox.observables.Data.Device" />
+            name="datapoint"
+            type="com.sandbox.observables.Data.DataPoint" />
     </data>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -16,13 +16,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="@{device.name}"/>
+            android:text="@{datapoint.name}"/>
 
         <TextView
             android:id="@+id/device_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="@{String.valueOf(device.id)}" />
+            android:text="@{String.valueOf(datapoint.color)}" />
     </LinearLayout>
 </layout>

@@ -9,34 +9,30 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.sandbox.observables.Data.Device;
-import com.sandbox.observables.Data.Vital;
+import com.sandbox.observables.Data.PointValue;
 import com.sandbox.observables.databinding.ActivityMainBinding;
 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     private Random random = new Random();
-    private Vital vital = new Vital(14, 0, "name");
+    private PointValue pointValue = new PointValue(14, 0, "name");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //set binding
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setVital(vital);
+        binding.setPointValue(pointValue);
     }
 
     public void changeValue(View view) {
-        vital.setValue(random.nextInt());
-        vital.setName("NAME+".concat(String.valueOf(random.nextInt())));
-        vital.setPriority();
+        pointValue.setValue(random.nextInt());
+        pointValue.setName("NAME+".concat(String.valueOf(random.nextInt())));
+        pointValue.setPriority();
     }
 
     public void navToList(View view) {
-        new Device("Name", 123);
-        new Device("Second Device", 234);
-
         Intent intent = new Intent(this, ListViewActivity.class);
         startActivity(intent);
     }

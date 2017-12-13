@@ -4,7 +4,7 @@ import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
 /**
- * Data for MVP activity
+ * Observable POJO extends @{link BaseObservable}
  */
 
 public class DataPoint extends BaseObservable {

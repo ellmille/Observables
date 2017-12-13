@@ -8,13 +8,13 @@ import android.databinding.Bindable;
  */
 
 
-public class Vital extends BaseObservable {
+public class PointValue extends BaseObservable {
     private String name;
     private int value;
     private int dsn;
     private int priority = 0;
 
-    public Vital(int value, int dsn, String name){
+    public PointValue(int value, int dsn, String name){
         this.value = value;
         this.dsn = dsn;
         this.name = name;

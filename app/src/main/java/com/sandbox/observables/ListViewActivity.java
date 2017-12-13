@@ -1,5 +1,6 @@
 package com.sandbox.observables;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -7,10 +8,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.sandbox.observables.Data.Device;
-import com.sandbox.observables.UI.DeviceListViewAdapter;
+import com.sandbox.observables.Data.DataPoint;
+import com.sandbox.observables.UI.DataListViewAdapter;
 
 import java.util.Random;
+
+/**
+ * Simple example of databinding and observable array list
+ */
 
 public class ListViewActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -21,7 +26,7 @@ public class ListViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
         recyclerView = findViewById(R.id.device_list);
-        DeviceListViewAdapter viewAdapter = new DeviceListViewAdapter();
+        DataListViewAdapter viewAdapter = new DataListViewAdapter();
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -29,7 +34,7 @@ public class ListViewActivity extends AppCompatActivity {
     }
 
     public void addDevice(View view){
-        new Device("Device".concat(String.valueOf(random.nextInt(100))), random.nextInt(100));
+        new DataPoint("name".concat(String.valueOf(random.nextInt())), Color.GREEN, String.valueOf(random.nextInt()));
         recyclerView.getAdapter().notifyDataSetChanged();
     }
 }
