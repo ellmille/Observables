@@ -2,6 +2,7 @@ package com.sandbox.observables.UI;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 
 import com.sandbox.observables.Data.DataPoint;
 import com.sandbox.observables.MVPListActivity;

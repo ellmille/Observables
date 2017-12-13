@@ -16,6 +16,7 @@ public class DataPoint extends BaseObservable {
         this.name = name;
         this.color = color;
         this.value = value;
+        DataPointContainer.getInstance().addPointToList(this);
     }
 
     @Bindable

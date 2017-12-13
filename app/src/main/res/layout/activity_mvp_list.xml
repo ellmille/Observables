@@ -9,12 +9,23 @@
         name="presenter"
         type="com.sandbox.observables.UI.ActivityPresenter" />
 </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-<android.support.v7.widget.RecyclerView
-    android:id="@+id/dataList"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dataList"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_data"
+            android:onClick="addData"/>
+    </LinearLayout>
 
 </layout>
 

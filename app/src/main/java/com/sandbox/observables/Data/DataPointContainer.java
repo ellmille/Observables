@@ -18,7 +18,7 @@ public class DataPointContainer {
         dataPointList = new ObservableArrayList<>();
     }
 
-    public void addToPointToList(DataPoint data){
+    public void addPointToList(DataPoint data){
         dataPointList.add(data);
         System.out.println(dataPointList.size());
     }

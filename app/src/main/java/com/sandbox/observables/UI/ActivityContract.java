@@ -8,11 +8,11 @@ import com.sandbox.observables.Data.DataPoint;
  */
 
 public interface ActivityContract {
-    public interface Presenter{
+    interface Presenter{
         void onShowData(DataPoint dataPoint);
         void showList();
     }
-    public interface View{
+    interface View{
         void showData(DataPoint dataPoint);
     }
 }
