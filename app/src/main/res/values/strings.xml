@@ -4,4 +4,6 @@
     <string name="add_device">Add Device</string>
     <string name="list_view">List View</string>
     <string name="mvp_view">MVP View</string>
+    <string name="show_data_model">Show data model</string>
+    <string name="show_list">Show List</string>
 </resources>

@@ -14,7 +14,6 @@ import com.sandbox.observables.Data.Vital;
 import com.sandbox.observables.databinding.ActivityMainBinding;
 
 import java.util.Random;
-//todo: https://developer.android.com/topic/libraries/data-binding/index.html
 
 public class MainActivity extends AppCompatActivity {
     private Random random = new Random();
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void navToMVP(View view) {
-        Intent intent = new Intent(this, MVPActivity.class);
+        Intent intent = new Intent(this, MvpActivity.class);
         startActivity(intent);
     }
 

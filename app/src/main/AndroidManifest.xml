@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListViewActivity" />
-        <activity android:name=".MVPActivity"></activity>
+        <activity android:name=".MvpActivity" />
+        <activity android:name=".MVPListActivity"></activity>
     </application>
 
 </manifest>
